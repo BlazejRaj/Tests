@@ -2,6 +2,12 @@
  * Klasa do wykonywania działań matematycznych
  */
 public final class Calculator {
+
+    public static int sum(int numberA, int numberB){
+        return numberA+numberB;
+    }
+
+
     /**
      * @param numberA Pierwsza liczba wchodząca w skład działania
      * @param numberB Druga liczba wchodząca w skład działania
@@ -59,4 +65,22 @@ public final class Calculator {
 
         return getFibonaciNumber(n-1) + getFibonaciNumber(n-2);
     }
+
+    public static double log(double a, double x){
+
+        if (a<= 0.0){
+            throw new IllegalArgumentException("Podstawa log musi być >0");
+        }
+        if (x<= 0.0){
+            throw new IllegalArgumentException("Liczba  musi być >0");
+        }
+        if (a== 1.0){
+            throw new IllegalArgumentException("Podstawa log musi być !=0");
+        }
+
+
+        return Math.log(x) / Math.log(a); //logax
+    }
+
+
 }
